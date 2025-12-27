@@ -4,7 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Main extends CI_Controller {
     public function index()  {
         $this->load->view('temp/header.php');
-        $this->load->view('temp/nav.php');
+            if($this->session->userdata('role') == 1){
+      $this->load->view('temp/nav_c.php');
+    }
+       else {
+      $this->load->view('temp/nav.php');
+    }
         $this->load->model('driversmodel');
        $data['result'] = $this->driversmodel->show_bike();
         $this->load->view('main.php', $data);
@@ -26,18 +31,23 @@ class Main extends CI_Controller {
       if (!empty($users)) {
         $this->session->set_userdata($users);
         if($this->session->userdata('role') == 1){
-            redirect('main/index');
+            redirect('../main/index');
         }
         else if($this->session->userdata('role') == 2){
-            redirect('main/index');
+            redirect('../main/index');
         }
         else {
-            redirect('main/index');
+            redirect('../main/index');
         }
       } else {
         echo 'Не верный логин и пароль';
       }
     }
     }
+      public function logout()
+  {
+    session_destroy();
+    redirect('main/index');
+  }
 }
 ?>

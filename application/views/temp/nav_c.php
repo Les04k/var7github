@@ -19,8 +19,9 @@
       </a>
 
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-           <ul class="nav nav-pills">
-        <li class="nav-item"><a href="main/log_form" class="nav-link">Вход</a></li>
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link">Личный кабинет</a></li>
+        <li class="nav-item"><a href="main/logout" class="nav-link">Выход</a></li>
       </ul>
       </nav>
     </div>
