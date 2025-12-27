@@ -7,8 +7,10 @@ class Ordermodel extends CI_Model {
          $result = $this->db->query($sql, array($id_user));
         return $result->result_array();
 }
-    public function create_order(){
-
+    public function creates_order($id_drive, $id_user){
+        $sql = "INSERT INTO orders( id_drive, id_user) VALUES (?,?)";
+        $result = $this->db->query($sql, array($id_drive, $id_user));
+        redirect('Location: users/cabinet');
     }
     
     }

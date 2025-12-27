@@ -30,8 +30,18 @@ class Users extends CI_Controller {
        $this->load->model('driversmodel');
        $data['result'] =$this->driversmodel->select_bike($id_drive);
         $this->load->model('ordermodel');
-        $this->ordermodel->create_order($id_user);
+        $this->ordermodel->creates_order($id_user);
         $this->load->view('cabinetu/create_order.php', $data);
         $this->load->view('temp/footer.php');
+    }
+    public function createt_order(){
+        if(!empty($_POST)){
+            $id_user = $_POST['id_user'];
+            $id_drive = $_POST['id_drive'];
+            var_dump($id_drive, $id_user);
+            $this->load->model('ordermodel');
+            $this->ordermodel->creates_order(  $id_drive,$id_user);
+
+        }
     }
 }

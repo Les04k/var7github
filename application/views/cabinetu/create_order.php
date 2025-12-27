@@ -1,5 +1,5 @@
 <div class="container">
-    <form action="" method="post">
+    <form action="users/createt_order" method="post">
            <h1>Вы хотите арендовать</h1>
     <?php 
         foreach ($result as $row){
@@ -7,7 +7,8 @@
            echo'<br>';
             echo   $id_user = $_SESSION['id_user'];
         }
-
+        $id_drive = $row['id_drive'];
+        $id_user
     ?> 
     <button type="submit">арендовать</button>
     </form>
