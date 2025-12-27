@@ -2,7 +2,7 @@
 <div class="container">
      <header>
     <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+      <a href="main/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 
         5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 
         0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 
@@ -20,7 +20,7 @@
 
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
     <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link">Личный кабинет</a></li>
+        <li class="nav-item"><a href="users/cabinet" class="nav-link">Личный кабинет</a></li>
         <li class="nav-item"><a href="main/logout" class="nav-link">Выход</a></li>
       </ul>
       </nav>

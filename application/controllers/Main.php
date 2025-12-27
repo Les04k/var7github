@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Main extends CI_Controller {
     public function index()  {
         $this->load->view('temp/header.php');
+         $id_user = $_SESSION['id_user'];
             if($this->session->userdata('role') == 1){
       $this->load->view('temp/nav_c.php');
     }
@@ -12,7 +13,7 @@ class Main extends CI_Controller {
     }
         $this->load->model('driversmodel');
        $data['result'] = $this->driversmodel->show_bike();
-        $this->load->view('main.php', $data);
+        $this->load->view('main.php', $data, $id_user);
         $this->load->view('temp/footer.php');
 
     }

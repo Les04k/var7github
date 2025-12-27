@@ -1,7 +1,8 @@
 <div class="container">
        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-  <?php 
+  <?php
   foreach($result as $row){
+    
     echo '
             <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm">
@@ -15,7 +16,7 @@
               <li>Тип велосипеда: '.$row['typedriver'].'</li>
               <li>Возрастная категорий: '.$row['agetipe'].'</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Арендовать</button>
+            <a href="/users/create_order?id_drive='.$row['id_drive'].'" type="button" class="w-100 btn btn-lg btn-outline-primary">Арендовать</a>
           </div>
         </div>
       </div>
